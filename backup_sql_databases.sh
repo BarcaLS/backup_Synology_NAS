@@ -33,7 +33,7 @@ for db in $databases; do
     echo "Processing database: $db"
     
     if [[ "$db" != _* ]] && [[ "$db" != "mysql" ]] && [[ "$db" != "performance_schema" ]] && [[ "$db" != "information_schema" ]]; then
-	FILENAME=${BACKUP_DIR}$db-${DATESTAMP}.sql.gz
+        FILENAME=${BACKUP_DIR}$db-${DATESTAMP}.sql.gz
         $MYSQL_DIR/mysqldump --user="$SQL_USER" --password="$SQL_PASS" --opt --routines --force --databases $db | gzip > $FILENAME
     fi
 done
