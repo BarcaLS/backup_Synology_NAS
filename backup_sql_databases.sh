@@ -7,6 +7,10 @@
 ############
 # Settings #
 ############
+
+# WARNING: THIS SCRIPT WILL DELETE ANY FILES OLDER THAN DAYS_KEEP IN BACKUP_DIR!
+# Make sure BACKUP_DIR is correctly set and contains only the intended backup files.
+
 BACKUP_DIR=/volume1/homes/user/backup_sql_databases/
 DAYS_KEEP=5 # script will remove backups older than $DAYS_KEEP days
 SQL_USER=root
